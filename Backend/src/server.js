@@ -19,7 +19,7 @@ const app = express();
 
 // ✅ Enable CORS with Cookies
 app.use(cors({
-  origin: "http://localhost:5174", // Allow frontend requests (Update this if needed)
+  origin: "http://localhost:5173", // Allow frontend requests (Update this if needed)
   credentials: true, // Allow Cookies
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
 }));
