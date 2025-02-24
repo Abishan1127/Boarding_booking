@@ -1,6 +1,3 @@
-
-
-
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
@@ -17,10 +14,10 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Enable CORS with Cookies
+//  Enable CORS with Cookies
 app.use(cors({
-  origin: "http://localhost:5173", // Allow frontend requests (Update this if needed)
-  credentials: true, // Allow Cookies
+  origin: "http://localhost:5173", 
+  credentials: true, 
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
 }));
 
@@ -30,7 +27,7 @@ app.use(bodyParser.json());
 
 app.use("/api/bookings", bookingRoutes);
 
-// ✅ Serve uploaded images
+// Serve uploaded images
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 
@@ -84,8 +81,8 @@ app.post("/send-email", async (req, res) => {
 
 
 
-// ✅ Start Server
+// Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
+  console.log(` Server running on http://localhost:${PORT}`);
 });

@@ -15,7 +15,7 @@ const Register = () => {
 
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false); // ✅ Prevent multiple submissions
+  const [loading, setLoading] = useState(false); 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -58,7 +58,7 @@ const Register = () => {
 
       if (response.data.success) {
         setSuccess("✅ Registration successful! You can now log in.");
-        setFormData({ // ✅ Clear form after success
+        setFormData({ 
           name: "",
           contactNumber: "",
           email: "",
